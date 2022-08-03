@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap');
+html, body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: contain;
+  height:100%;
+  background-color: rgb(15 23 42);
+  font-family: Poppins, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, ::before, ::after {
+  box-sizing: border-box;
+  border-spacing: 0px;
+  padding: 0;
+  margin: 0;
+}
+.hamburger-react{
+  cursor:default!important;
+}
+.hSlider {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+.hSlider::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
