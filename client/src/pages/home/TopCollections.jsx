@@ -29,9 +29,9 @@ const TopCollections = () => {
         <div className="flex flex-col shadow ring-1 ring-black ring-opacity-5 md:rounded-lg ">
           <table className="overscroll-x-contain ">
             <thead className="w-full h-full">
-              <tr className='whitespace-nowrap z-[100] bg-slate-900 opacity-1'>
-                <th scope="col" className="sticky left-0 z-[100] w-[32px] text-left text-sm font-normal bg-slate-900 opacity-1"/>
-                <th scope="col" className="sticky left-[40px] z-[100] h-full max-w-[50vw] text-left text-sm font-medium bg-slate-900 opacity-1">Collection</th>
+              <tr className='whitespace-nowrap z-[100] bg-slate-100 opacity-1'>
+                { user.currentAccount.address ? <th scope="col" className="sticky left-0 z-[100] w-[32px] text-left text-sm font-normal bg-slate-100 opacity-1"/> : '' }
+                <th scope="col" className={ (user.currentAccount.address ? `left-[40px] ` : `left-0 `) +`sticky z-[100] h-full max-w-[50vw] text-left text-sm font-medium bg-slate-100 opacity-1`}>Collection</th>
                 <th scope="col" className="px-4 text-right text-sm font-medium">Floor Price</th>
                 <th scope="col" className="px-4 text-right text-sm font-medium">Average Price</th>
                 <th scope="col" className="px-4 text-right text-sm font-medium">Sales</th>
@@ -41,8 +41,8 @@ const TopCollections = () => {
             </thead>
             <tbody className="divide-y divide-slate-500">
               { topCollections.map((collection,idx) => 
-              <tr key={idx} className='px-2 py-3 z-[100] bg-slate-900 opacity-1'>
-                <td className="pl-2 sticky text-center min-w-[40px] left-0 z-[100] text-sm bg-slate-900 opacity-1">
+              <tr key={idx} className='px-2 py-3 z-[100] bg-slate-100 opacity-1'>
+                <td className="pl-2 sticky text-center min-w-[40px] left-0 z-[100] text-sm bg-slate-100 opacity-1">
                   { user.currentAccount.address &&
                     <AddToggler 
                       isAdded={ user.currentAccount.watchlist[collection.slug] ? true : false } 
@@ -52,7 +52,7 @@ const TopCollections = () => {
                   }
                 </td>
 
-                <td className="sticky left-[40px] z-[100] text-sm  opacity-1 bg-slate-900 border-r border-slate-700">
+                <td className="sticky left-[40px] z-[100] text-sm  opacity-1 bg-slate-100 border-r border-slate-500">
                   <div className="flex gap-x-4 pr-3 items-center w-[60vw] h-[90px] max-h-[90px] max-w-[60vw] py-2">
                     <Link 
                       to={ `/collections/${ collection.slug }`}
