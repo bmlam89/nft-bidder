@@ -20,9 +20,9 @@ const NewCollections = () => {
 
   return (
     <div key='new-collections-wrapper'>
-      <header className='flex w-full h-auto items-center justify-between mb-1 pt-4  px-5'>
-        <p className='text-lg font-semibold'>Recently Listed</p>
-        <p className='text-sm font-light place-self-end'>{ `View More >` }</p>
+      <header className='flex w-full h-auto items-center justify-between mb-1 pt-4'>
+        <p className='text-lg font-light'>Recently Listed</p>
+        <p className='text-xs font-light place-self-end'>{ `View More >` }</p>
       </header>
       <section 
         id='new-nfts-section'
@@ -33,7 +33,7 @@ const NewCollections = () => {
             <div
               id={ `${idx}` }
               key={ `new-nft-card-wrapper${idx}` }
-              className='flex flex-col min-w-full h-[40vh] py-1 sliderEle snap-center snap-always snap-mandatory'
+              className='flex flex-col min-w-full h-[40vh] py-1 sliderEle snap-center snap-normal snap-proximity'
             >
               <div className='flex w-full h-3/4'>
                 <Link to={ `/collections/${ data.slug }`} >
