@@ -20,8 +20,8 @@ const NewCollections = () => {
 
   return (
     <div key='new-collections-wrapper'>
-      <header className='flex w-full h-auto items-center justify-between mb-1 pt-4'>
-        <p className='text-lg font-light'>Recently Listed</p>
+      <header className='flex w-full h-auto items-center justify-between mb-1 pt-4 px-2'>
+        <p className='text-lg font-medium'>Recently Listed</p>
         <p className='text-xs font-light place-self-end'>{ `View More >` }</p>
       </header>
       <section 
