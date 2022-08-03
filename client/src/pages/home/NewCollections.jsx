@@ -61,7 +61,7 @@ const NewCollections = () => {
                   className='items-center gap-x-2 h-full flex max-w-[70vw]'
                 >
                   <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
-                    <img src = { data.image_url } alt={ data.slug } className='min-h-[40px] min-w-[40px] h-10 w-10 rounded-full object-cover'/>
+                    <img src = { data.image_url } alt={ data.slug } className='min-h-[40px] min-w-[40px] h-10 w-10 border-slate-50 border-2 rounded-full object-cover'/>
                   </Link>
                   <ul>
                     <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
