@@ -21,8 +21,8 @@ const NewCollections = () => {
   return (
     <div key='new-collections-wrapper'>
       <header className='flex w-full h-auto items-center justify-between mb-1 pt-4  px-5'>
-        <p className='text-xl font-bold'>Recently Listed</p>
-        <p className='text-sm place-self-end'>{ `View More >` }</p>
+        <p className='text-lg font-semibold'>Recently Listed</p>
+        <p className='text-sm font-light place-self-end'>{ `View More >` }</p>
       </header>
       <section 
         id='new-nfts-section'
