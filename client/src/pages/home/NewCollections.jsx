@@ -33,7 +33,7 @@ const NewCollections = () => {
             <div
               id={ `${idx}` }
               key={ `new-nft-card-wrapper${idx}` }
-              className='flex flex-col min-w-full h-[40vh] py-1 sliderEle snap-center snap-normal snap-proximity'
+              className='flex flex-col min-w-full h-[40vh] py-1 sliderEle snap-end snap-normal snap-mandatory'
             >
               <div className='flex w-full h-3/4 border-y-2 border-gray-900'>
                 <Link to={ `/collections/${ data.slug }`} >
