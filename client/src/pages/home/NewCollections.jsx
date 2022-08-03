@@ -55,13 +55,13 @@ const NewCollections = () => {
                 </Link>
               </div>
               
-              <footer className='h-1/4 flex w-full justify-between px-3 py-1 overflow-hidden'>
+              <footer className='h-1/4 flex w-full justify-between px-3 py-1 overflow-hidden outline-2 outline-gray-100'>
                 <div 
                   id='footer-logo-and-text-wrapper'
                   className='items-center gap-x-2 h-full flex max-w-[70vw]'
                 >
                   <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
-                    <img src = { data.image_url } alt={ data.slug } className='min-h-[40px] min-w-[40px] h-10 w-10 rounded-full outline outline-gray-500 object-cover'/>
+                    <img src = { data.image_url } alt={ data.slug } className='min-h-[40px] min-w-[40px] h-10 w-10 rounded-full object-cover'/>
                   </Link>
                   <ul>
                     <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
