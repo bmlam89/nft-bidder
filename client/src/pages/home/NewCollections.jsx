@@ -61,7 +61,7 @@ const NewCollections = () => {
                   className='items-center gap-x-2 h-full flex max-w-[70vw]'
                 >
                   <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
-                    <img src = { data.image_url } alt={ data.slug } className='min-h-[40px] min-w-[40px] h-10 w-10 border-slate-50 border-2 rounded-full object-cover'/>
+                    <img src = { data.image_url } alt={ data.slug } className='min-h-[40px] min-w-[40px] h-10 w-10 border-slate-500 border-2 rounded-full object-cover'/>
                   </Link>
                   <ul>
                     <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
@@ -87,7 +87,7 @@ const NewCollections = () => {
           )}
           { newCollections && <div 
             id='banner-pageNumber-wrapper'
-            className='py-2 px-3 border text-xs border-gray-500 bg-gray-900 opacity-[.9] rounded-lg absolute top-[114px] right-6'
+            className='py-2 px-3 border text-xs border-gray-500 bg-gray-900 opacity-[.9] rounded-lg absolute top-[114px] right-4'
           >
             {`${visibleIdx} / ${newCollections.length}`}
           </div> }
