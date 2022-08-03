@@ -31,7 +31,7 @@ const AnimatedDropdownMenu = () => {
       <Transition
         as='div'
         show={isToggled.dropdown}
-        className='absolute h-[calc(100vh)] w-screen bg-black overscroll-none pt-14'
+        className='absolute h-[calc(100vh)] w-screen bg-slate-300 overscroll-none pt-14'
         enter='transition-transform ease-in duration-300 delay-100'
         enterFrom='-translate-y-[calc(100vh-56px)]'
         enterTo='translate-y-0'

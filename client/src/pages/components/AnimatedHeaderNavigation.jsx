@@ -25,7 +25,7 @@ const AnimatedHeaderNavigation = (props) => {
     <Transition 
       as='nav'
       show={isVisible} 
-      className={ `w-full h-14 fixed top-0 flex flex-auto flex-col bg-slate-900 shadow-sm shadow-slate-900 opacity-[.99] z-[1000]` }
+      className={ `w-full h-14 fixed top-0 flex flex-auto flex-col bg-slate-300 shadow opacity-[.99] z-[1000]` }
       key='header-nav-transition'
       enter={ `transition-transform ease-in-out duration-600 delay-500` }
       enterFrom={ `-translate-y-14` }
