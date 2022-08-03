@@ -21,7 +21,7 @@ const NewCollections = () => {
   return (
     <div key='new-collections-wrapper'>
       <header className='flex w-full h-auto items-center justify-between mb-1 pt-4 px-2'>
-        <p className='text-lg font-medium'>Recently Listed</p>
+        <p className='text-lg font-normal'>Recently Listed</p>
         <p className='text-xs font-light place-self-end'>{ `View More >` }</p>
       </header>
       <section 
@@ -55,7 +55,7 @@ const NewCollections = () => {
                 </Link>
               </div>
               
-              <footer className='h-1/4 flex w-full justify-between px-3 py-1 overflow-hidden outline outline-slate-500'>
+              <footer className='h-1/4 flex w-full justify-between px-3 py-1 overflow-hidden'>
                 <div 
                   id='footer-logo-and-text-wrapper'
                   className='items-center gap-x-2 h-full flex max-w-[70vw]'
@@ -65,9 +65,9 @@ const NewCollections = () => {
                   </Link>
                   <ul>
                     <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
-                      <li className='text-base font-semibold line-clamp-2'>{ data.name }</li>
+                      <li className='text-base font-normal line-clamp-2'>{ data.name }</li>
                     </Link>
-                    <li className='flex text-xs text-gray-500 font-base line-clamp-1'>
+                    <li className='flex text-xs text-gray-500 font-light line-clamp-1'>
                       { `${data.supply} tks | ${data.owners} owners | ${data.elapsed_time}` }
                     </li>
                   </ul>
@@ -78,7 +78,7 @@ const NewCollections = () => {
                 >
                   {/*<p className='relative top-[5px] text-xs text-gray-500'>floor:</p>*/}
                   <img src={data.payment_token[0].image_url} className='h-6 w-6'/>
-                  <p className='font-medium text-2xl'>
+                  <p className='font-normal text-2xl'>
                     { data.floor_price > 1000 ? Number((data.floor_price/1000).toFixed(1))+'K' : +data.floor_price.toFixed(1) }
                   </p>
                 </div>
