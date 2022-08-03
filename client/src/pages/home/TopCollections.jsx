@@ -42,7 +42,7 @@ const TopCollections = () => {
             <tbody className="divide-y divide-slate-500">
               { topCollections.map((collection,idx) => 
               <tr key={idx} className='px-2 py-3 z-[100] bg-slate-100 opacity-1'>
-                <td className={ (user.currentAccount.address ? `min-w-[40px] ` : `w-0 `)`pl-2 sticky text-center left-0 z-[100] text-sm bg-slate-100 opacity-1` }>
+                <td className={ (user.currentAccount.address ? `min-w-[40px] ` : `w-0 `) + `pl-2 sticky text-center left-0 z-[100] text-sm bg-slate-100 opacity-1` }>
                   { user.currentAccount.address &&
                     <AddToggler 
                       isAdded={ user.currentAccount.watchlist[collection.slug] ? true : false } 
@@ -52,7 +52,7 @@ const TopCollections = () => {
                   }
                 </td>
 
-                <td className= { (user.currentAccount.address ? `left-[40px] ` : `left-0 `) + `sticky z-[100] text-sm  opacity-1 bg-slate-100 border-r border-slate-500` }>
+                <td className={ (user.currentAccount.address ? `left-[40px] ` : `left-0 `) + `sticky z-[100] text-sm  opacity-1 bg-slate-100 border-r border-slate-500` }>
                   <div className="flex gap-x-4 pr-3 items-center w-[60vw] h-[90px] max-h-[90px] max-w-[60vw] py-2">
                     <Link 
                       to={ `/collections/${ collection.slug }`}
