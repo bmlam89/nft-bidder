@@ -35,7 +35,7 @@ const NewCollections = () => {
               key={ `new-nft-card-wrapper${idx}` }
               className='flex flex-col min-w-full h-[40vh] py-1 sliderEle snap-center snap-normal snap-proximity'
             >
-              <div className='flex w-full h-3/4'>
+              <div className='flex w-full h-3/4 border-y-2 border-slate-300'>
                 <Link to={ `/collections/${ data.slug }`} >
                 { data.banner_src ? (
                   <img
@@ -67,8 +67,8 @@ const NewCollections = () => {
                     <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
                       <li className='text-base font-normal line-clamp-2'>{ data.name }</li>
                     </Link>
-                    <li className='flex text-sm text-gray-500 font-light line-clamp-1'>
-                      { `${data.supply} tks | ${data.owners} owners | ${data.elapsed_time}` }
+                    <li className='flex text-sm text-gray-700 font-light line-clamp-1'>
+                      { `${data.supply} tokens | ${data.owners} owners | ${data.elapsed_time}` }
                     </li>
                   </ul>
                 </div>
@@ -87,7 +87,7 @@ const NewCollections = () => {
           )}
           { newCollections && <div 
             id='banner-pageNumber-wrapper'
-            className='py-2 px-3 border text-xs border-gray-500 bg-gray-900 opacity-[.9] rounded-lg absolute top-[114px] right-4'
+            className='py-2 px-3 border text-xs border-gray-500 bg-gray-900 opacity-[.9] rounded-lg absolute top-[114px] right-1 text-white'
           >
             {`${visibleIdx} / ${newCollections.length}`}
           </div> }
