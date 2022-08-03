@@ -13,7 +13,7 @@ const AppContextWrapper = () => {
     <div 
       key='app-padding-wrapper'
       id='app-padding-wrapper'
-      className={ `text-white pt-14 pb-12 bg-slate-900` }
+      className={ `pt-14 pb-12` }
     >
       <BrowserRouter>
         {/*<AnimatedHeaderNavigation/>*/}

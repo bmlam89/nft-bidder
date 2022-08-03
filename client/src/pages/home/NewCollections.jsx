@@ -67,7 +67,7 @@ const NewCollections = () => {
                     <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
                       <li className='text-base font-normal line-clamp-2'>{ data.name }</li>
                     </Link>
-                    <li className='flex text-xs text-gray-500 font-light line-clamp-1'>
+                    <li className='flex text-sm text-gray-500 font-light line-clamp-1'>
                       { `${data.supply} tks | ${data.owners} owners | ${data.elapsed_time}` }
                     </li>
                   </ul>
