@@ -22,7 +22,7 @@ const NewCollections = () => {
     <div key='new-collections-wrapper'>
       <header className='flex w-full h-auto items-center justify-between mb-1 pt-4 px-2'>
         <p className='text-lg font-normal'>Recently Listed</p>
-        <p className='text-xs font-light place-self-end'>{ `View More >` }</p>
+        <p className='text-sm font-light place-self-end'>{ `View More >` }</p>
       </header>
       <section 
         id='new-nfts-section'
@@ -35,7 +35,7 @@ const NewCollections = () => {
               key={ `new-nft-card-wrapper${idx}` }
               className='flex flex-col min-w-full h-[40vh] py-1 sliderEle snap-center snap-normal snap-proximity'
             >
-              <div className='flex w-full h-3/4 border-y-2 border-slate-300'>
+              <div className='flex w-full h-3/4 border-y-2 border-gray-900'>
                 <Link to={ `/collections/${ data.slug }`} >
                 { data.banner_src ? (
                   <img
@@ -55,19 +55,19 @@ const NewCollections = () => {
                 </Link>
               </div>
               
-              <footer className='h-1/4 flex w-full justify-between px-3 py-1 overflow-hidden outline-2 outline-gray-100'>
+              <footer className='h-1/4 flex w-full justify-between px-3 py-1 overflow-hidden outline-2 outline-gray-900 shadow'>
                 <div 
                   id='footer-logo-and-text-wrapper'
                   className='items-center gap-x-2 h-full flex max-w-[70vw]'
                 >
                   <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
-                    <img src = { data.image_url } alt={ data.slug } className='min-h-[40px] min-w-[40px] h-10 w-10 border-slate-500 border-2 rounded-full object-cover'/>
+                    <img src = { data.image_url } alt={ data.slug } className='min-h-[40px] min-w-[40px] h-10 w-10 border-gray-900 border-2 rounded-full object-cover'/>
                   </Link>
                   <ul>
                     <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
                       <li className='text-base font-normal line-clamp-2'>{ data.name }</li>
                     </Link>
-                    <li className='flex text-sm text-gray-700 font-light line-clamp-1'>
+                    <li className='flex text-sm text-gray-900 font-light line-clamp-1'>
                       { `${data.supply} tokens | ${data.owners} owners | ${data.elapsed_time}` }
                     </li>
                   </ul>
