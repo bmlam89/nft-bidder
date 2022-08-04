@@ -20,7 +20,7 @@ const TopCollections = () => {
       >
         <header className='flex flex-wrap w-full h-auto items-center  mb-1 px-1'>
           <p className='text-xl font-bold basis-full'>Top Collections</p>
-          <p className='text-xs text-slate-500'>Browse by floor price, volume, mkt. cap & more</p>
+          <p className='text-xs text-gray-900'>Browse by floor price, volume, mkt. cap & more</p>
         </header>
       </section>
       { !topCollections ? 'Loading...'
@@ -56,7 +56,7 @@ const TopCollections = () => {
                   <div className="flex gap-x-4 pr-3 items-center w-[60vw] h-[90px] max-h-[90px] max-w-[60vw] py-2">
                     <Link 
                       to={ `/collections/${ collection.slug }`}
-                      className='flex min-h-[40px] min-w-[40px] h-10 w-10 rounded-full outline outline-slate-500 overflow-hidden'
+                      className='flex min-h-[40px] min-w-[40px] h-10 w-10 rounded-full border-2 border-black overflow-hidden'
                     >
                       <img className="min-w-[40px] min-h-[40px]" src={ collection.image_url } alt={ collection.name }/>
                     </Link>
@@ -69,7 +69,7 @@ const TopCollections = () => {
                           { `${idx+1}. ${collection.name}` }
                         </Link>
                       </span>
-                      <div className="text-xs text-slate-500 line-clamp-1">No. Tokens: { collection.supply }</div>
+                      <div className="text-sm text-gray-900 line-clamp-1">No. Tokens: { collection.supply }</div>
                     </div>
                   </div>
                 </td>
