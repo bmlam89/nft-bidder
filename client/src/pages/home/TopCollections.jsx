@@ -42,7 +42,7 @@ const TopCollections = () => {
             <tbody className="divide-y divide-slate-500">
               { topCollections.map((collection,idx) => 
               <tr key={idx} className='px-2 py-3 z-[100] bg-slate-100 opacity-1'>
-                <td className={ (user.currentAccount.address ? `min-w-[40px] ` : `w-0 `) + `pl-2 sticky text-center left-0 z-[100] text-sm bg-slate-100 opacity-1` }>
+                <td className={ (user.currentAccount.address ? `min-w-[40px] ` : `hidden `) + `pl-2 sticky text-center left-0 z-[100] text-sm bg-slate-100 opacity-1` }>
                   { user.currentAccount.address &&
                     <AddToggler 
                       isAdded={ user.currentAccount.watchlist[collection.slug] ? true : false } 
