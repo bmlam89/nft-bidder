@@ -17,7 +17,7 @@ const CollectionHomepage = () => {
   const isToggled = useNavigation();
   const user = useUser();
   const fetchCollection = () => {
-    fetch(`/collection/${slug}`)
+    fetch(`/collection/details/${slug}`)
     .then(response => response.json())
     .then(collection => setCollection(collection.data))
   }

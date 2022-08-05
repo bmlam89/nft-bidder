@@ -4,6 +4,6 @@ const collectionController = require('../controllers/collectionController');
 
 router.route("/new").get(collectionController.getNewCollections);
 router.route("/top").get(collectionController.getTopCollections);
-router.route('/:slug').get(collectionController.getCollectionDetails);
+router.route('/details/:slug').get(collectionController.getCollectionDetails);
 
 module.exports = router;
