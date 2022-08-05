@@ -12,6 +12,12 @@ export {default as AnimatedHeaderNavigation} from './components/AnimatedHeaderNa
 export {default as AnimatedFooterNavigation} from './components/AnimatedFooterNavigation';
 export {default as AnimatedDropdownMenu} from './components/AnimatedDropdownMenu';
 
+export {default as Listings} from './collection/Listings';
+export {default as CollectionDetails} from './collection/CollectionDetails';
+export {default as LineChart} from './collection/LineChart';
+export {default as MyPositions} from './collection/MyPositions';
+export {default as CollectionHomepage} from './collection/CollectionHomepage';
+
 export {default as NewCollections} from './home/NewCollections';
 export {default as TopCollections} from './home/TopCollections';
 export {default as Home} from './home/Home';

@@ -1,5 +1,6 @@
 const helpers = require('../utils/helpers');
 const Collection = require('../models/Collection');
+const TimeseriesCollection = require('../models/TimeseriesCollection');
 
 exports.getNewCollections = async (req, res) => {
   try {
@@ -44,7 +45,7 @@ exports.getNewCollections = async (req, res) => {
       data: formattedNewCollections.sort((c1,c2) => new Date(c2.release_date) - new Date(c1.release_date)),
     });
   } catch(e) {
-    console.log(error);
+    console.error(e);
     res.status(500).json({
       status: "error",
       message: "collectionController error when trying to fetch NEW collections",
@@ -84,10 +85,48 @@ exports.getTopCollections = async (req, res) => {
       data: formattedTopCollections,
     });
   } catch(e) {
-    console.log(error);
+    console.error(e);
     res.status(500).json({
       status: "error",
       message: "collectionController error when trying to fetch TOP collections",
+    });
+  }
+}
+
+exports.getCollectionDetails = async (req, res) => {
+  try {
+    let document = await Collection.findOne({'slug': req.params.slug}).exec();
+    let collection = document._doc;
+    
+    let pipeline = [
+      { '$addFields':{ 'time':{ '$dateToString':{ 'date':'$start', 'format':'%m-%d-%Y @ %H:%M:%S', 'timezone':"-08"}}}},
+      { 
+        '$match': { 
+         '$and':
+          [
+            { '$expr':{ '$lt': [{ '$dateDiff': { 'startDate': "$_id", 'endDate': '$$NOW', 'unit': "hour" } }, 24 ] } },
+            {'slug': req.params.slug }
+          ],
+        }
+      },
+    ]
+    
+    let timeseriesPrices = await TimeseriesCollection.aggregate(pipeline);
+    let initialFloorPriceData = timeseriesPrices[0]
+    let dailyChange = +((collection.stats.floor_price - initialFloorPriceData.floor_price)/initialFloorPriceData.floor_price*100).toFixed(2);
+    payment_token = collection.payment_tokens.filter(token => token.symbol === 'ETH');
+    collection.payment_token = payment_token.length ? payment_token : false;
+    collection.timeseries = timeseriesPrices;
+    collection.dailyChange = dailyChange;
+    res.status(200).json({
+      status: "success",
+      data: collection,
+    });
+  } catch(e) {
+    console.error(e);
+    res.status(500).json({
+      status: "error",
+      message: "collectionController error when trying to fetch timeseries collection data",
     });
   }
 }

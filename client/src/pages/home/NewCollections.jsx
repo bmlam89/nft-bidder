@@ -33,10 +33,10 @@ const NewCollections = () => {
             <div
               id={ `${idx}` }
               key={ `new-nft-card-wrapper${idx}` }
-              className='flex flex-col min-w-full h-[40vh] py-1 sliderEle snap-end snap-normal snap-mandatory'
+              className='flex flex-col min-w-full h-[40vh] py-1 sliderEle snap-end snap-always snap-mandatory'
             >
               <div className='flex w-full h-3/4 border-y-2 border-gray-900'>
-                <Link to={ `/collections/${ data.slug }`} >
+                <Link to={ `/collection/${ data.slug }`} >
                 { data.banner_src ? (
                   <img
                     className='object-cover w-screen h-full'
@@ -60,11 +60,11 @@ const NewCollections = () => {
                   id='footer-logo-and-text-wrapper'
                   className='items-center gap-x-2 h-full flex max-w-[70vw]'
                 >
-                  <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
+                  <Link to={ `/collection/${ data.slug }`} href={ `/${ data.slug }`}>
                     <img src = { data.image_url } alt={ data.slug } className='min-h-[40px] min-w-[40px] h-10 w-10 border-gray-900 border-2 rounded-full object-cover'/>
                   </Link>
                   <ul>
-                    <Link to={ `/collections/${ data.slug }`} href={ `/${ data.slug }`}>
+                    <Link to={ `/collection/${ data.slug }`} href={ `/${ data.slug }`}>
                       <li className='text-base font-normal line-clamp-2'>{ data.name }</li>
                     </Link>
                     <li className='flex text-sm text-gray-900 font-light line-clamp-1'>

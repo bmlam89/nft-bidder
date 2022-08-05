@@ -20,7 +20,7 @@ const TopCollections = () => {
       >
         <header className='flex flex-wrap w-full h-auto items-center  mb-1 px-1'>
           <p className='text-xl font-bold basis-full'>Top Collections</p>
-          <p className='text-xs text-gray-900'>Browse by floor price, volume, mkt. cap & more</p>
+          <p className='text-xs text-slate-500'>Browse by floor price, volume, mkt. cap & more</p>
         </header>
       </section>
       { !topCollections ? 'Loading...'
@@ -55,7 +55,7 @@ const TopCollections = () => {
                 <td className={ (user.currentAccount.address ? `left-[40px] ` : `left-0 `) + `sticky z-[100] text-sm  opacity-1 bg-slate-100 border-r border-slate-500` }>
                   <div className="flex gap-x-4 pr-3 items-center w-[60vw] h-[90px] max-h-[90px] max-w-[60vw] py-2">
                     <Link 
-                      to={ `/collections/${ collection.slug }`}
+                      to={ `/collection/${ collection.slug }`}
                       className='flex min-h-[40px] min-w-[40px] h-10 w-10 rounded-full border-2 border-black overflow-hidden'
                     >
                       <img className="min-w-[40px] min-h-[40px]" src={ collection.image_url } alt={ collection.name }/>
@@ -63,13 +63,13 @@ const TopCollections = () => {
                     <div>
                       <span className='inline'>
                         <Link className="font-bold text-md break-words line-clamp-2" 
-                          to={ `/collections/${ collection.slug }` }
+                          to={ `/collection/${ collection.slug }` }
                           state={ collection }
                         >
                           { `${idx+1}. ${collection.name}` }
                         </Link>
                       </span>
-                      <div className="text-sm text-gray-900 line-clamp-1">No. Tokens: { collection.supply }</div>
+                      <div className="text-sm text-slate-500 line-clamp-1">No. Tokens: { collection.supply }</div>
                     </div>
                   </div>
                 </td>
@@ -77,8 +77,8 @@ const TopCollections = () => {
                   <span className='inline-flex items-center text-center'>
                   <img className='w-4 h-4' src={ collection.payment_token[0].image_url }/>
                   { !collection.floor_price ? 0
-                    : collection.floor_price > 1000 ? Number((collection.floor_price/1000).toFixed(1))+'K' 
-                    : +collection.floor_price.toFixed(1) }
+                    : collection.floor_price > 1000 ? Number((collection.floor_price/1000).toFixed(2))+'K' 
+                    : +collection.floor_price.toFixed(2) }
                   </span>
                 </td>  
                 <td className="px-4 text-sm text-right">
