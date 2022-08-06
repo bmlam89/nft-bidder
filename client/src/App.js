@@ -18,8 +18,11 @@ function App() {
   }
 
   useEffect(() => {
-    fetchNewCollections();
-    fetchTopCollections();
+    if(!newCollections && !topCollections) {
+      fetchNewCollections();
+      fetchTopCollections();
+    }
+ 
   },[]);
 
   return (

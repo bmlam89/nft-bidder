@@ -74,7 +74,6 @@ export const UserProvider = (props) => {
     } catch (error) {
       console.log(error);
 
-      throw new Error("No ethereum object");
     }
   };
 

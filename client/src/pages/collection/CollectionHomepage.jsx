@@ -80,7 +80,7 @@ const CollectionHomepage = () => {
               </span>
             </div>
           </div>
-          <img className='w-12 h-12 place-self-center rounded-full outline outline-slate-500' src={ collection.image_url}/>
+          <img className='w-12 h-12 place-self-center rounded-full border-2 border-black' src={ collection.image_url}/>
         </header>
         <LineChart collection={collection}/>
         { user.currentAccount.address && <MyPositions collection={collection}/> }

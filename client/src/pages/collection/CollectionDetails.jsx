@@ -44,7 +44,7 @@ const CollectionDetails = (props) => {
               key={ `collection-info-${idx}` }
               className='flex basis-1/2 justify-between border-b border-gray-500 text-sm font-light'
             >
-              <p className='text-gray-300'> { label } </p>
+              <p className='text-gray-500'> { label } </p>
               { 
                 collection.eth_idx.includes(idx) ? 
                   <span className='inline-flex'>
