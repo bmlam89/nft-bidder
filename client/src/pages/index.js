@@ -21,3 +21,10 @@ export {default as CollectionHomepage} from './collection/CollectionHomepage';
 export {default as NewCollections} from './home/NewCollections';
 export {default as TopCollections} from './home/TopCollections';
 export {default as Home} from './home/Home';
+
+export {default as SweeperHomepage} from './sweeper/SweeperHomepage';
+export {default as Setup} from './sweeper/ConfigureSweeper';
+export {default as Review} from './sweeper/ReviewSweeper';
+export {default as Confirm} from './sweeper/ConfirmSweeper';
+export {default as Complete} from './sweeper/RunSweeper';
+export {default as Register} from './sweeper/RegisterWallet';

@@ -24,7 +24,7 @@ const AnimatedFooterNavigation = (props) => {
   const handleWalletRegistration =  () => {
     let options = {
       method: 'POST',
-      url: 'http://localhost:4000/register',
+      url: '/register',
       headers: {Accept: 'text/json'},
       data: { 
         address: user.currentAccount.address,
@@ -68,7 +68,7 @@ const AnimatedFooterNavigation = (props) => {
     });
     let options = {
       method: 'POST',
-      url: 'http://localhost:4000/submit',
+      url: '/submit',
       headers: {Accept: 'text/json'},
       data: {
         address: user.currentAccount.address,
@@ -96,7 +96,7 @@ const AnimatedFooterNavigation = (props) => {
     { user.currentAccount.address && <Transition 
       as='nav'
       show={isVisible} 
-      className={ `fixed bottom-0 h-14 w-screen bg-slate-900 border-t border-slate-700 opacity-[.99] z-[1000]` }
+      className={ `fixed bottom-0 h-14 w-screen bg-slate-300 border-t border-slate-700 opacity-[.99] z-[1000]` }
       id='nav-transition'
       key='nav-transition' 
       enter={ `transition ease-in-out duration-500 transform delay-500` }
