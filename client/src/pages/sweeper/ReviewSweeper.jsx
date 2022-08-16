@@ -48,50 +48,50 @@ const DisplayConfigs = (props) => {
 
         <img src={`${collection.imageUrl}`} className='w-[64px] h-[64px] bg-black rounded place-self-center'/>
         <div className="ml-4 flex flex-col w-full sm:ml-6 gap-y-2">
-          <a href='#' className="font-medium text-slate-50 hover:text-slate-500">{`${collection.name}`}</a>
+          <a href='#' className="font-medium  hover:0">{`${collection.name}`}</a>
           <div className='flex w-full justify-between gap-x-4'>
             <span className='flex h-full basis-1/2 justify-between align-baseline'>
-              <p className='flex basis-1/2 text-sm text-slate-500'>Floor:</p>
+              <p className='flex basis-1/2 text-sm 0'>Floor:</p>
               <span className='flex justify-end basis-1/2'>
                 <img className='w-5 h-5 inline relative bottom-[1px]'src={ collection.ethImageUrl }/>
-                <p className='inline text-slate-50 text-sm'>{ `${ +stats.metrics[collection.name].floorPrice.toFixed(2) }` }</p>
+                <p className='inline  text-sm'>{ `${ +stats.metrics[collection.name].floorPrice.toFixed(2) }` }</p>
               </span>
             </span>
             <span className='flex h-full basis-1/2 justify-between align-baseline'>
-              <p className='flex basis-1/2 text-sm text-slate-500'>Bid:</p>
+              <p className='flex basis-1/2 text-sm 0'>Bid:</p>
               <span className='flex justify-end basis-1/2'>
                 <img className='w-5 h-5 inline relative bottom-[1px]'src={ collection.wEthImageUrl }/>
-                <p className='inline text-slate-50 text-sm'>{ `${ +stats.metrics[collection.name].bid.toFixed(2) }` }</p>
+                <p className='inline  text-sm'>{ `${ +stats.metrics[collection.name].bid.toFixed(2) }` }</p>
               </span>
             </span>
           </div>
           <div className='flex w-full justify-between gap-x-4'>
             <span className='flex h-full basis-1/2 justify-between align-baseline'>
-              <p className='flex basis-1/2 text-sm text-slate-500'>Profit:</p>
+              <p className='flex basis-1/2 text-sm 0'>Profit:</p>
               <span className='flex justify-end basis-1/2'>
-                <p className='inline text-slate-50 text-sm'>{ +(stats.metrics[collection.name].profitTarget*100).toFixed(2)+'%' }</p>
+                <p className='inline  text-sm'>{ +(stats.metrics[collection.name].profitTarget*100).toFixed(2)+'%' }</p>
               </span>
             </span>
             <span className='flex h-full basis-1/2 justify-between align-baseline'>
-              <p className='flex basis-1/2 text-sm text-slate-500'>Fees:</p>
+              <p className='flex basis-1/2 text-sm 0'>Fees:</p>
               <span className='flex justify-end basis-1/2'>
-                <p className='inline text-slate-50 text-sm'>{ +(stats.metrics[collection.name].sellerFees*100).toFixed(2)+'%' }</p>
+                <p className='inline  text-sm'>{ +(stats.metrics[collection.name].sellerFees*100).toFixed(2)+'%' }</p>
               </span>
             </span>
           </div>
           <div className='flex w-full justify-between gap-x-4'>
             <span className='flex h-full basis-1/2 justify-between align-baseline'>
-              <p className='flex basis-1/2 text-sm text-slate-500'>Gross:</p>
+              <p className='flex basis-1/2 text-sm 0'>Gross:</p>
               <span className='flex justify-end basis-1/2'>
                 <img className='w-5 h-5 inline relative bottom-[1px]'src={ collection.ethImageUrl }/>
-                <p className='inline text-slate-50 text-sm'>{ `${ +stats.metrics[collection.name].grossIncome.toFixed(2) }` }</p>
+                <p className='inline  text-sm'>{ `${ +stats.metrics[collection.name].grossIncome.toFixed(2) }` }</p>
               </span>
             </span>
             <span className='flex h-full basis-1/2 justify-between align-baseline'>
-              <p className='flex basis-1/2 text-sm text-slate-500'>Net:</p>
+              <p className='flex basis-1/2 text-sm 0'>Net:</p>
               <span className='flex justify-end basis-1/2'>
                 <img className='w-5 h-5 inline relative bottom-[1px]'src={ collection.ethImageUrl }/>
-                <p className='text-slate-50 text-sm'>{ `${ +stats.metrics[collection.name].netIncome.toFixed(2) }` }</p>
+                <p className=' text-sm'>{ `${ +stats.metrics[collection.name].netIncome.toFixed(2) }` }</p>
               </span>
             </span>
           </div>
@@ -106,16 +106,16 @@ const DisplayConfigs = (props) => {
       <div>
         <dl className="space-y-4">
           <div className="flex items-center justify-between">
-            <dt className="text-base font-medium text-slate-50">Collections</dt>
-            <dd className="flex gap-x-2 ml-4 text-base font-medium text-cyan-500">
+            <dt className="text-base font-medium ">Collections</dt>
+            <dd className="flex gap-x-2 ml-4 text-base font-medium text-blue-600">
               <span>{ props.config.watchlistCollections.current.value.filter(collection => collection.active === true).length }</span>
             </dd>
           </div>
         </dl>
         <dl className="space-y-4">
           <div className="flex items-center justify-between">
-            <dt className="text-base font-medium text-slate-50">Bids</dt>
-            <dd className="flex gap-x-2 ml-4 text-base font-medium text-cyan-500">
+            <dt className="text-base font-medium ">Bids</dt>
+            <dd className="flex gap-x-2 ml-4 text-base font-medium text-blue-600">
               <span>{ props.config.assetQty.current.value * props.config.watchlistCollections.current.value.filter(collection => collection.active === true).length }</span>
             </dd>
           </div>
@@ -123,9 +123,9 @@ const DisplayConfigs = (props) => {
         
         <dl className="space-y-4">
           <div className="flex items-center justify-between">
-            <dt className="text-base font-medium text-slate-50">Profit potential</dt>
-            <dd className="flex gap-x-0.5 ml-4 text-base font-medium text-cyan-500">
-              <img className='w-6 h-6 inline relative bottom-[1px]'src={ data.ethImageUrl }/>
+            <dt className="text-base font-medium ">Profit potential</dt>
+            <dd className="flex gap-x-0.5 ml-4 text-base font-medium text-blue-600">
+              <img className='w-5 h-4 inline relative top-[4px]'src={ data.ethImageUrl }/>
 
               <span>{ +(stats.cumulativeProfit).toFixed(2) }</span>
             </dd>
@@ -144,7 +144,7 @@ const Review = () => {
     <div className="px-6 py-3 border-b border-slate-700" key='review-collections-wrapper'>
     { <main key='main-review-wrapper'>
         <div key='div-review-collections-wrapper'>
-          <p className='text-sm text-slate-50'>
+          <p className='text-sm '>
             Please review and confirm that you'd like to sweep the following listings.
           </p>
           {

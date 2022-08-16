@@ -39,19 +39,19 @@ const AnimatedDropdownMenu = () => {
         leaveFrom='translate-y-[100vh]'
         leaveTo='-translate-y-[calc(100vh-56px)]'
       >
-        <div className="border-b border-gray-200 py-3">
+        <div className="border-b border-black py-3">
           <div className='flex items-center justify-center'>
             {!user.currentAccount.address ? (
-              <button className='mx-6 my-2 w-full border text-slate-50 font-bold border-blue-900 rounded bg-blue-700 py-2 px-4'
+              <button className='mx-6 my-2 w-full border font-bold border-blue-900 rounded bg-blue-700 py-2 px-4'
                 onClick={user.connectWallet}
               >
                 Connect wallet
               </button>
             ) : (
               <div className='flex items-center pt-6'>
-                <p className='justify-self-start text-xl font-bold text-slate-50 mr-2'>Wallet balance:</p>
+                <p className='justify-self-start text-xl font-bold  mr-2'>Wallet balance:</p>
                 {/*<img src={ `../../assets/ETH.svg` }/>*/}
-                <p className='flex text-3xl font-bold text-slate-50'>
+                <p className='flex text-3xl font-bold '>
                   {user.currentAccount.ethBalance}
                 </p>
               </div>
@@ -59,11 +59,11 @@ const AnimatedDropdownMenu = () => {
           </div>
         </div>
         { user.currentAccount.address && 
-          <div className="max-w-3xl mx-auto px-2 pt-2 pb-3 space-y-1 sm:px-4 border-b border-white">
+          <div className="max-w-3xl mx-auto px-2 pt-2 pb-3 space-y-1 sm:px-4 ">
             { userNavigation.map(item => 
               <a key={ item.name }
                 href={item.href}
-                className='text-slate-300 flex items-center gap-x-2  py-2 px-1 mx-3 border-b border-slate-500'
+                className=' flex items-center gap-x-2  py-2 px-1 mx-3 border-b border-black'
               >
                 {item.icon}
                 {item.name}
@@ -77,7 +77,7 @@ const AnimatedDropdownMenu = () => {
               <div className='flex justify-between items-center  pr-4'>
                 <a
                   href={item.href}
-                  className='text-slate-300 flex items-center gap-x-2  py-2 px-1 mx-3'
+                  className=' flex items-center gap-x-2  py-2 px-1 mx-3'
                 >
                   {item.icon}
                   {item.name}
@@ -88,7 +88,7 @@ const AnimatedDropdownMenu = () => {
                 key={item.name}
                 href={item.href}
                 aria-current={item.current ? 'page' : undefined}
-                className='text-slate-300 flex items-center gap-x-2  py-2 px-1 mx-3 border-b border-slate-500'
+                className=' flex items-center gap-x-2  py-2 px-1 mx-3 border-b border-black'
               >
                 { idx!==0 && item.icon }
                 { item.name}

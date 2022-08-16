@@ -176,7 +176,7 @@ const Setup = () => {
               className='flex relative top-1'
               onClick={() => handleAddConfig()}
             >
-              <GrFormAdd className='w-6 h-6 bg-cyan-500 rounded-full'/>
+              <GrFormAdd className='w-6 h-6 bg-blue-700 rounded-full'/>
             </button>
           </div>
         </header>

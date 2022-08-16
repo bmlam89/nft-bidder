@@ -107,7 +107,7 @@ const AnimatedFooterNavigation = (props) => {
           { (location.pathname === `/collections/:slug` || location.pathname ==='/') && 
           <Link 
             to={ '/sweeper' } 
-            className='flex w-full h-full bg-cyan-500 cursor-default rounded-md justify-center'
+            className='flex w-full h-full bg-blue-700 cursor-default rounded-md justify-center'
           >
             <p className='place-self-center'>Sweep Listings</p>
           </Link> }
@@ -117,7 +117,7 @@ const AnimatedFooterNavigation = (props) => {
          
           ( <Link 
               to={ '/sweeper' }
-              className='flex w-full h-full bg-cyan-500 rounded-md justify-center items-center'
+              className='flex w-full h-full bg-blue-700 rounded-md justify-center items-center'
             >
               <button onClick={() => handleWalletRegistration()}>
                 <p className='place-self-center'>Register Wallet</p>
@@ -129,7 +129,7 @@ const AnimatedFooterNavigation = (props) => {
           { user.registeredSweeperWallet &&
           <Link 
             to={ '/sweeper/review' } 
-            className='flex w-full h-full bg-cyan-500 cursor-default rounded-md justify-center'
+            className='flex w-full h-full bg-blue-700 cursor-default rounded-md justify-center'
           >
             <p className='place-self-center'>Review Setup</p>
           </Link> }
@@ -137,14 +137,14 @@ const AnimatedFooterNavigation = (props) => {
           { location.pathname ==='/sweeper/review' && 
           <Link 
             to={ '/sweeper/confirm' } 
-            className='flex w-full h-full bg-cyan-500 cursor-default rounded-md justify-center'
+            className='flex w-full h-full bg-blue-700 cursor-default rounded-md justify-center'
           >
             <p className='place-self-center'>Confirm Bids</p>
           </Link> }
           { location.pathname ==='/sweeper/confirm' && 
           <Link 
             to={ '/sweeper/complete' } 
-            className='flex w-full h-full bg-cyan-500 cursor-default rounded-md justify-center'
+            className='flex w-full h-full bg-blue-700 cursor-default rounded-md justify-center'
           >
             <button onClick={() => handleSweeperFormSubmission()}>
               <p className='place-self-center'>Run Sweeper</p>
@@ -153,7 +153,7 @@ const AnimatedFooterNavigation = (props) => {
           { location.pathname ==='/sweeper/complete' && 
           <Link 
             to={ '/' } 
-            className='flex w-full h-full bg-cyan-500 cursor-default rounded-md justify-center'
+            className='flex w-full h-full bg-blue-700 cursor-default rounded-md justify-center'
           >
             <p className='place-self-center'>Homepage</p>
           </Link> }

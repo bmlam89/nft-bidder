@@ -28,7 +28,7 @@ const AddToggler = (props) => {
       className={ `flex focus:outline-none cursor-default p-.5 items-center rounded` }
       onClick={ () => toggleHandler() }
     >
-      { isToggled ? <RiAddBoxFill className='rounded w-6 h-6 text-cyan-500'/> : <RiAddBoxLine className='rounded w-6 h-6 text-slate-500'/> }
+      { isToggled ? <RiAddBoxFill className='rounded w-6 h-6 text-blue-700'/> : <RiAddBoxLine className='rounded w-6 h-6 text-black font-xs'/> }
     </button>
   )
 };

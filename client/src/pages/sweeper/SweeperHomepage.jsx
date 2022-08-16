@@ -15,17 +15,12 @@ const SweeperHomepage = () => {
       headers: {Accept: 'text/json'},
       data: { address: user.currentAccount.address }
     }
-    console.log(options,'inside fetchUser in sweeper homepage')
     axios.request(options)
     .then(response => {
-      console.log(response,'RESPONSEEEE sweeperhomepage')
       if(response.data) {
         user.setActiveSweepers(response.data.user);
         user.setRegisteredSweeperWallet(true);
-        console.log('fetch users from inside of sweeper homepage', user.registeredSweeperWallet,response.data);
-      } else {
-        console.log(response,'response from /login in sweeper homepage');
-      }
+      } 
     }).catch(error => console.error(error,'post request error to /login sweeper homepage'));
   }
 

@@ -9,10 +9,10 @@ const Stepper = () => {
     { id: '03', name: 'Sweep', href: '#', status: 'upcoming' },
   ]
   let classNames = {
-    '/sweeper': ['border-cyan-900 bg-cyan-300 text-slate-900', 'border-slate-500 text-slate-500', 'border-slate-500 text-slate-500'],
-    '/sweeper/review':['border-cyan-600 text-cyan-400','border-cyan-900 bg-cyan-300 text-slate-900', 'border-slate-500 text-slate-500'],
-    '/sweeper/confirm':['border-cyan-600 text-cyan-400', 'border-cyan-600 text-cyan-400', 'border-cyan-900 bg-cyan-300 text-slate-900'],
-    '/sweeper/complete':['border-cyan-600 text-cyan-400', 'border-cyan-600 text-cyan-400', 'border-cyan-600 text-cyan-400']
+    '/sweeper': ['border-blue-900 bg-blue-600 text-slate-900', 'border-slate-500 text-slate-500', 'border-slate-500 text-slate-500'],
+    '/sweeper/review':['border-blue-700 text-black','border-blue-900 bg-blue-600 text-slate-900', 'border-slate-500 text-slate-500'],
+    '/sweeper/confirm':['border-blue-700 text-black', 'border-blue-700 text-black', 'border-blue-900 bg-blue-600 text-slate-900'],
+    '/sweeper/complete':['border-blue-700 text-black', 'border-blue-700 text-black', 'border-blue-700 text-black']
   }
   
   return (
