@@ -32,7 +32,7 @@ export const UserProvider = (props) => {
 
   const isConnected = async () => {
     try {
-      if (!ethereum) return alert("Please install MetaMask.");
+      //if (!ethereum) return alert("Please install MetaMask.");
       const accounts = await ethereum.request({ method: "eth_accounts" });
       if (accounts.length) {
         const address = accounts[0];
@@ -65,7 +65,7 @@ export const UserProvider = (props) => {
   
   const connectWallet = async () => {
     try {
-      if (!ethereum) return alert("Please install MetaMask.");
+      //if (!ethereum) return alert("Please install MetaMask.");
 
       const accounts = await ethereum.request({ method: "eth_requestAccounts", });
       setCurrentAccount( { address: accounts[0], ethBalance: '', watchlist: {} } );
@@ -74,6 +74,7 @@ export const UserProvider = (props) => {
     } catch (error) {
       console.log(error);
 
+      throw new Error("No ethereum object");
     }
   };
 
