@@ -6,8 +6,8 @@ const Confirm = () => {
   const user = useUser();
 
   return (
-    <div className="px-6 py-6 border-b border-slate-700 text-left" key='review-collections-wrapper'>
-      { user.currentAccount.address && <main className='flex flex-col gap-y-5'>
+    <div className="px-6 pb-6 border-b border-slate-700 text-left" key='review-collections-wrapper'>
+      { user.currentAccount.address && <main className='flex flex-col'>
         <div className='flex flex-col gap-y-3'>
           <p className='text-base text-slate-50'>
             For final confirmation, please make sure you understand the following.

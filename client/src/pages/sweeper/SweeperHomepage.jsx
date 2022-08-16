@@ -36,7 +36,7 @@ const SweeperHomepage = () => {
       key='sweeper-homepage-wrapper'
       className='flex flex-col w-screen h-auto'
     >
-      <header className='flex flex-col  shadow-sm shadow-slate-700 pb-6'>
+      <header className='flex flex-col  shadow-sm shadow-slate-700 pb-5'>
         <div className='flex w-full h-full px-5 pt-4 pb-3'>
           <span className='flex flex-col w-full h-auto'>
             <p className='text-3xl font-bold'>Sweeper</p>
