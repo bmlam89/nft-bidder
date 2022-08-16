@@ -32,21 +32,21 @@ const ComboSelect = (props) => {
       onChange={(option) => handleChange(option)}
       className={ `${props.wrapperClassname}` }
     >
-      <Combobox.Label className={ `block text-sm text-slate-500 ${props.labelClassname}` }>{props.fieldName}</Combobox.Label>
+      <Combobox.Label className={ `block text-sm ${props.labelClassname}` }>{props.fieldName}</Combobox.Label>
       <div className={ `relative mt-1 ${props.innerWrapperClassname}` }>
         <Combobox.Input
-          className={ `flex place-self-end text-left w-full rounded-md border border-slate-50 bg-slate-900 py-0.5 
+          className={ `flex place-self-end text-left w-full rounded-md border border-slate-50 py-0.5 
            focus:outline-none sm:text-xs ${props.inputClassname} line-clamp-1 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500` }
           onChange={(event) => setQuery(event.target.value)}
           displayValue={ (option) => option.value }
        />
         <Combobox.Button className="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none">
-          <VscChevronDown className="h-5 w-5 text-slate-50" aria-hidden="true" />
+          <VscChevronDown className="h-5 w-5 " aria-hidden="true" />
         </Combobox.Button>
 
         {filteredOptions.length > 0 && (
           <Combobox.Options 
-            className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-slate-800 py-1 
+            className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md py-1 
             text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
           >
             {filteredOptions.map((option) => (
@@ -56,7 +56,7 @@ const ComboSelect = (props) => {
                 className={
                   classNames(
                     'relative flex flex-col py-3 gap-x-2 px-4 cursor-default select-none border-b border-slate-50 items-start justify-start',
-                    option.value === current ? 'bg-cyan-600 text-slate-50' : 'text-slate-50'
+                    option.value === current ? 'bg-cyan-600' : ''
                   )
                 }
               >

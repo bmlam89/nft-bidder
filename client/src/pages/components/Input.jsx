@@ -21,7 +21,7 @@ const Input = (props) => {
           name={ `${props.htmlForNameId}` }
           id={ `${props.htmlForNameId}` }
           className="text-slate-50 shadow-sm focus:ring-cyan-500 focus:border-cyan-500 block w-full sm:text-sm 
-          border-slate-300 rounded-md bg-slate-900 py-0.5 truncate pr-5"
+          border-slate-300 rounded-md py-0.5 truncate pr-5"
           placeholder={ `${props.inputPlaceholder ? props.inputPlaceholder : ''}` }
           aria-describedby={ `${props.htmlForNameId}` }
           value={ `${input}` }

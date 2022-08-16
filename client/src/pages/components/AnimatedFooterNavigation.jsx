@@ -24,7 +24,7 @@ const AnimatedFooterNavigation = (props) => {
   const handleWalletRegistration =  () => {
     let options = {
       method: 'POST',
-      url: '/register',
+      url: '/user/register',
       headers: {Accept: 'text/json'},
       data: { 
         address: user.currentAccount.address,
@@ -35,21 +35,16 @@ const AnimatedFooterNavigation = (props) => {
 
     axios.request(options)
     .then(response => {
-      console.log(response,'inside of register before response.data')
       if(response.data) {
         user.setRegisteredSweeperWallet(true);
-        user.setActiveSweepers({configs: []});    
-        console.log(user,'made it in here for /register');
+        user.setActiveSweepers({configs: response.data.user.configs});    
       }
-      console.log(response, 'response inside of /register in animatedFooter');
     })
     .catch(error => console.error(error,'post request error to /register in animatedFooter'));
   }
 
   const handleSweeperFormSubmission = () => {
-    console.log(user,'user inside of AnimatedFooter.jsx for /submit route to backend');
     let confirmedConfigs = [];
-    console.log(user.pendingConfigs,'PENDING CONFIGSSS');
     user.pendingConfigs.map(config => {
       confirmedConfigs.push({
         start: (new Date()).toLocaleString(),
@@ -68,7 +63,7 @@ const AnimatedFooterNavigation = (props) => {
     });
     let options = {
       method: 'POST',
-      url: '/submit',
+      url: '/user/submit',
       headers: {Accept: 'text/json'},
       data: {
         address: user.currentAccount.address,

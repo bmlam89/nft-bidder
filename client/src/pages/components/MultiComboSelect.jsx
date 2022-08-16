@@ -36,20 +36,20 @@ const MultiComboSelect = (props) => {
       onChange={(option) => handleFormUpdate(option)}
       className={ `${props.wrapperClassname}` }
     >
-      <Combobox.Label className={ `block text-sm text-slate-500 ${props.labelClassname}` }>{ config.label }</Combobox.Label>
+      <Combobox.Label className={ `block text-sm ${props.labelClassname}` }>{ config.label }</Combobox.Label>
       <div className={ `relative mt-1 ${props.innerWrapperClassname}` }>
         <Combobox.Input
-          className={ `flex place-self-end text-left text-slate-50 w-full rounded-md border border-slate-50 bg-slate-900 py-0.5 pr-12
+          className={ `flex place-self-end text-left  w-full rounded-md border border-slate-300 py-0.5 pr-12
            focus:outline-none sm:text-xs ${props.inputClassname} truncate shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500` }
            displayValue={ config.current.name }
         />
         <Combobox.Button className="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none">
-          <VscChevronDown className="h-5 w-5 text-slate-50" aria-hidden="true" />
+          <VscChevronDown className="h-5 w-5 " aria-hidden="true" />
         </Combobox.Button>
 
         {config.current.value && (
           <Combobox.Options 
-            className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-slate-800 py-1 
+            className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md py-1 
             text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
           >
             {config.current.value.map((option,idx) => (
@@ -58,7 +58,7 @@ const MultiComboSelect = (props) => {
                 value={option}
                 className={
                     'relative flex flex-col py-3 gap-x-2 px-4 cursor-default select-none border-b border-slate-50 items-start justify-start '
-                    + option.active === true ? 'bg-cyan-600 text-slate-50' : 'text-slate-50'
+                    + option.active === true ? 'bg-cyan-600 text-slate-50' : ''
                 }
               >
                 <div className="flex w-full h-full">

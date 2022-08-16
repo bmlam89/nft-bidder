@@ -4,13 +4,14 @@ const path = require('path');
 
 const connectDB = require('./configs/db');
 const collectionRoutes = require("./routes/collectionRoutes");
-
+const userRoutes = require('./routes/userRoutes');
 
 connectDB();
 
 const app = express();
 app.use(express.json());
 app.use("/collection", collectionRoutes);
+app.use('/user', userRoutes)
 
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname,'/client/build')));
