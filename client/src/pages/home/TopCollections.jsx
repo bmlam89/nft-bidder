@@ -31,7 +31,7 @@ const TopCollections = () => {
             <thead className="w-full h-full">
               <tr className='whitespace-nowrap z-[100] bg-slate-100 opacity-1'>
                 { user.currentAccount.address ? <th scope="col" className="sticky left-0 z-[100] w-[32px] text-left text-sm font-normal bg-slate-100 opacity-1"/> : '' }
-                <th scope="col" className={ (user.currentAccount.address ? `left-[40px] ` : `left-0 `) +`sticky z-[100] h-full max-w-[50vw] text-left text-sm font-medium bg-slate-100 opacity-1`}>Collection</th>
+                <th scope="col" className={ (user.currentAccount.address ? `left-[40px] ` : `left-0 `) +`sticky z-[100] h-full max-w-[50vw] text-left text-sm font-medium bg-slate-100 opacity-1 pl-2`}>Collection</th>
                 <th scope="col" className="px-4 text-right text-sm font-medium">Floor Price</th>
                 <th scope="col" className="px-4 text-right text-sm font-medium">Average Price</th>
                 <th scope="col" className="px-4 text-right text-sm font-medium">Sales</th>
@@ -52,7 +52,7 @@ const TopCollections = () => {
                   }
                 </td>
 
-                <td className={ (user.currentAccount.address ? `left-[40px] ` : `left-0 `) + `sticky z-[100] text-sm  opacity-1 bg-slate-100 border-r border-slate-500` }>
+                <td className={ (user.currentAccount.address ? `left-[40px] ` : `left-0 pl-2 `) + `sticky z-[100] text-sm  opacity-1 bg-slate-100 border-r border-slate-500` }>
                   <div className="flex gap-x-4 pr-3 items-center w-[60vw] h-[90px] max-h-[90px] max-w-[60vw] py-2">
                     <Link 
                       to={ `/collection/${ collection.slug }`}

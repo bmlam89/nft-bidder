@@ -31,7 +31,7 @@ const AnimatedDropdownMenu = () => {
       <Transition
         as='div'
         show={isToggled.dropdown}
-        className='absolute h-[calc(100vh)] w-screen bg-slate-300 overscroll-none pt-14'
+        className='absolute h-[calc(100vh)] w-screen bg-black overscroll-none pt-14'
         enter='transition-transform ease-in duration-300 delay-100'
         enterFrom='-translate-y-[calc(100vh-56px)]'
         enterTo='translate-y-0'
@@ -110,7 +110,7 @@ const AnimatedDropdownMenu = () => {
         </span>
         <span className='flex w-full h-full items-center justify-center'>
           <a 
-            className={ `w-3/4 h-auto place-self-center text-center border rounded text-md font-light` }
+            className={ `w-3/4 h-auto place-self-center text-center border border-black rounded text-md font-light` }
             onClick={() => toggleHandler( { search: !isToggled.search, dropdown: isToggled.dropdown } )}
           >
             <span className='inline-flex gap-x-1'>             
@@ -121,7 +121,7 @@ const AnimatedDropdownMenu = () => {
         </span>
         <span className='flex justify-center'>
           <button className="rounded-md p-1 inline-flex items-center justify-center 
-            text-gray-100 focus:outline-none"
+            focus:outline-none"
             onClick={user.connectWallet}
           >
             <span className='sr-only'>Connect crypto wallet</span>
