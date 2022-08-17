@@ -12,7 +12,7 @@ const Complete = () => {
       className='flex px-5 pt-6'
     >
       <p>
-        Sweeper is now running. To view current bids, navigate to your <a href="/open-positions" className='text-blue-600'>positions</a> or <a href='https://opensea.io/' className='text-cyan-500'> Opensea</a>.
+        Sweeper is now running. To view current bids, navigate to your <a href="/open-positions" className='text-blue-600'>positions</a> or <a href='https://opensea.io/' className='text-blue-500'> Opensea</a>.
       </p>
     </div>
   )
