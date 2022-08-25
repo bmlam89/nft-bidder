@@ -27,7 +27,7 @@ const Register = () => {
     <div className="px-6 py-2 border-b border-slate-700 text-justify" key='review-collections-wrapper'>
       <main className='flex flex-col gap-y-8'>
         <div className='flex flex-col gap-y-2 break-words'>
-          <p className='text-xl text-white font-bold underline underline-offset-8'>
+          <p className='text-xl text-black font-bold underline underline-offset-8'>
             Unregisterred Sweeper Wallet! 
           </p>
           <p className='text-base text-slate-500'>

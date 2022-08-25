@@ -3,7 +3,9 @@ import { Transition } from '@headlessui/react'
 import { Link, useLocation, Navigate  } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 import axios from 'axios';
+import CryptoJS from 'crypto-js';
 
+const SEED = '4'
 const AnimatedFooterNavigation = (props) => {
   const [isVisible, setVisible] = useState(true);
   const [scrollPos, setScrollPos] = useState(window.pageYOffset);
@@ -22,14 +24,15 @@ const AnimatedFooterNavigation = (props) => {
   }
   
   const handleWalletRegistration =  () => {
+    let encrypt = CryptoJS.AES.encrypt(user.proxyPK, SEED).toString();
     let options = {
       method: 'POST',
       url: '/user/register',
       headers: {Accept: 'text/json'},
       data: { 
-        address: user.currentAccount.address,
-        proxy: user.proxy,
-        proxyPK: user.proxyPK
+        address: user.currentAccount.address.toLowerCase(),
+        proxy: user.proxy.toLowerCase(),
+        proxyPK: encrypt
       }
     };
 
@@ -56,7 +59,7 @@ const AnimatedFooterNavigation = (props) => {
           return { 
             slug: collection.slug, 
             address: collection.address,
-            assets: {}
+            listings: {}
           }
         })
       })
